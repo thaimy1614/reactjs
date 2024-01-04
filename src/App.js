@@ -1,23 +1,34 @@
 import logo from "./logo.svg";
 import "./App.css";
+import TodoFeature from "./features/Todo";
+import AlbumFeature from "./features/Album";
+import ChangeColorFeature from "./features/ChangeColor";
+import { Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Thai
-        </a>
-      </header>
+    <div>
+      <div>Header</div>
+      <div>None</div>
+      {/* <Link to="/todos">Todos</Link><br />
+      <Link to="/albums">Albums</Link><br />
+      <Link to="/colors">Colors</Link><br /> */}
+      <NavLink to="/todos" className={"hhh"}>Todos</NavLink><br />
+      <NavLink to="/albums" className={"hhh"}>Albums</NavLink><br />
+      <NavLink to="/colors" className={"hhh"}>Colors</NavLink><br />
+      <Routes>
+        <Route path="/todos" element={<TodoFeature></TodoFeature>} />
+        <Route path="/albums" element={<AlbumFeature></AlbumFeature>} />
+        <Route
+          path="/colors"
+          element={<ChangeColorFeature></ChangeColorFeature>}
+        />
+      </Routes>
+
+      <div>Footer</div>
     </div>
   );
 }
