@@ -23,7 +23,7 @@ function App() {
         <Route path="/todos" element={<TodoFeature></TodoFeature>} />
         <Route path="/albums" element={<AlbumFeature></AlbumFeature>} />
         <Route
-          path="/colorsr"
+          path="/colorsrr"
           element={<ChangeColorFeature></ChangeColorFeature>}
         />
       </Routes>
